@@ -1,14 +1,8 @@
-<h1>Загрузка аудиофайла</h1>
-<form action="/upload/" method="post" enctype="multipart/form-data">
-    <input name="file" type="file" required />
+
+
+
+<h1 class="col-5">Загрузка аудиофайла</h1>
+<form id="audio-upload-form" class="col-4" method="post" enctype="multipart/form-data">
+    <input id="audio-upload" name="audio_file" type="file" required />
     <input type="submit" value="Загрузить" />
 </form>
-
-<main>
-    <h2>Загрузите файл аудио для транскрипции</h2>
-    <form>
-        <input type="file" id="audio-upload" accept="audio/*" />
-    </form>
-    <h3>Транскрипция текста:</h3>
-    <textarea id="transcription-text" rows="10" readonly></textarea>
-</main>
