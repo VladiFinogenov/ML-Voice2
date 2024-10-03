@@ -1,11 +1,15 @@
 $(document).ready(function() {
-    $('#audio-upload').on('change', function(e) {
-        var file = e.target.files[0];
+    $('#audio-upload-form').on('submit', function(e) {
+        // Предотвращаем стандартную отправку формы
+        e.preventDefault();
+
+        // Получаем файл из input
+        var file = $('#audio-upload')[0].files[0];
         var formData = new FormData();
         formData.append('audio_file', file);
 
         $.ajax({
-            url: '/upload/', // URL для эндпоинта загрузки файлов в FastAPI
+            url: 'http://127.0.0.1:8000/upload/', // URL для эндпоинта загрузки файлов в FastAPI
             type: 'POST',
             data: formData,
             processData: false,

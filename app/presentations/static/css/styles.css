@@ -1,25 +1,55 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100vh; /* Устанавливаем минимальную высоту для body, чтобы footer всегда находился внизу */
+    font: 14px/24px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
 }
 
-header, footer {
-    background-color: #f8f9fa;
-    padding: 20px;
-    text-align: center;
+.header {
+    background-color: #262926; /* Цвет фона для хедера */
+    color: white; /* Цвет текста в хедере */
+    padding: 20px; /* Отступы в хедере */
+    text-align: center; /* Центрирование текста в хедере */
 }
 
-main {
-    flex-grow: 1;
+.container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
+    flex: 1; /* Занимает все доступное пространство между хедером и футером */
+    padding: 15px; /* Отступы внутри контейнера */
+    background: #f1f1f1;
+}
+
+.row {
+    display: flex; /* Создаем ряд с колонками */
+    flex: 1; /* Позволяем рядам растягиваться */
+    flex-wrap: wrap; /* Позволяем колонкам переноситься */
+    margin-bottom: 15px; /* Отступ между рядами */
+}
+
+.col {
+    padding: 15px; /* Отступы вокруг колонок */
+    background-color: #f1f1f1; /* Цвет фона для видимости колонок */
+    text-align: center; /* Выравнивание текста по центру */
+    flex: 1; /* Позволяем колонкам растягиваться равномерно */
+}
+
+.row .col {
+    min-width: 200px; /* Минимальная ширина для колонок */
+}
+
+.footer {
+    background-color: #333; /* Цвет фона для футера */
+    color: white; /* Цвет текста в футере */
+    text-align: center; /* Центрирование текста в футере */
+    padding: 30px; /* Отступы в футере */
+    width: 100%;
+    margin-top: auto;
 }
