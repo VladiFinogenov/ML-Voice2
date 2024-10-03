@@ -1,0 +1,31 @@
+{% extends 'index.html' %}
+
+{% block title %}Главная страница{% endblock %}
+
+{% block content %}
+
+
+
+    <div class="col">1
+        <h2>Это главная страница</h2>
+        <p>Здесь размещен основной контент.</p>
+
+    </div>
+    <div class="col">2</div>
+    <div class="col">3</div>
+        {% include 'includes/tabs.html' %}
+    <div class="col">4</div>
+    <div class="col">5
+        {% include 'form_files_upload.html' %}
+    </div>
+    <div class="col">6</div>
+    <div class="col">7</div>
+    <div class="col">8</div>
+    <div class="col">9</div>
+    <div class="col">10</div>
+    <div class="col">11</div>
+    <div class="col">12</div>
+
+
+
+{% endblock %}
